@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Music Player</title>
+    <link rel="stylesheet" href="musicplayer.css">
+</head>
+<body>
+
+<div class="player">
+    <h2 id="title">Song Title</h2>
+    <h4 id="artist">Artist Name</h4>
+
+    <audio id="audio"></audio>
+
+    <!-- Progress Bar -->
+    <input type="range" id="progress" value="0">
+
+    <!-- Time -->
+    <div class="time">
+        <span id="current">0:00</span>
+        <span id="duration">0:00</span>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button onclick="prevSong()">⏮</button>
+        <button onclick="playPause()">▶ / ⏸</button>
+        <button onclick="nextSong()">⏭</button>
+    </div>
+
+    <!-- Volume -->
+    <label>🔊 Volume</label>
+    <input type="range" id="volume" min="0" max="1" step="0.1">
+
+    <!-- Playlist -->
+    <ul id="playlist"></ul>
+</div>
+
+<script src="musicplayer.js"></script>
+</body>
+</html>
